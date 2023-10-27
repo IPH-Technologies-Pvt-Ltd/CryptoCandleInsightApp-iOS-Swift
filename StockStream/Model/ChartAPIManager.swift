@@ -26,7 +26,6 @@ struct ChartAPIManager{
     }
     
     func fetchDataFromSymbolApi(){
-        
         let symbolUrlString = "https://finnhub.io/api/v1/crypto/symbol?exchange=binance&token=\(apiKey)"
         guard let symbolUrl = URL(string: symbolUrlString) else{
             print("Invalid symbolURL string")
@@ -50,7 +49,6 @@ struct ChartAPIManager{
     }
     
     func performRequestFromChartApi(){
-        
         guard let chartUrl = URL(string: chartUrlString!) else{
             print("Invalid cryptoCandleUrl string")
             return

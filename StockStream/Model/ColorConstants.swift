@@ -82,5 +82,17 @@ extension UIColor
     {
         UIColor(red: 46/255, green: 115/255, blue: 228/255, alpha: 1)
     }
+    class func navBarTitleImageViewColor() -> UIColor
+    {
+        UIColor(red: 171/255, green: 171/255, blue: 182/255, alpha: 1)
+    }
+    class func navBarTitleLabelColor() -> UIColor
+    {
+        UIColor(red: 90/255, green: 90/255, blue: 90/255, alpha: 1)
+    }
+    class func navBarTitleTextColor() -> UIColor
+    {
+        UIColor(red: 180/255, green: 179/255, blue: 184/255, alpha: 1)
+    }
 }
 

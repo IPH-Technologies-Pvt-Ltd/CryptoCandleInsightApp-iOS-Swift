@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         let bitcoinTitleLabel = UILabel()
         bitcoinTitleLabel.text = "BTC"
         bitcoinTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        bitcoinTitleLabel.textColor = UIColor(red: 90/255, green: 90/255, blue: 90/255, alpha: 1)
+        bitcoinTitleLabel.textColor = UIColor.navBarTitleLabelColor()
         let imageView = UIImageView()
         NSLayoutConstraint.activate([
             imageView.heightAnchor.constraint(equalToConstant: 20),
@@ -47,11 +47,11 @@ class HomeViewController: UIViewController {
         imageView.backgroundColor = .clear
         let navBarTitleImage = UIImage(named: "cycle")?.withRenderingMode(.alwaysTemplate)
         imageView.image = navBarTitleImage
-        imageView.tintColor = UIColor(red: 171/255, green: 171/255, blue: 182/255, alpha: 1)
+        imageView.tintColor = UIColor.navBarTitleImageViewColor()
         let etheriumTitleLabel = UILabel()
         etheriumTitleLabel.text = "ETH"
         etheriumTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        etheriumTitleLabel.textColor = UIColor(red: 90/255, green: 90/255, blue: 90/255, alpha: 1)
+        etheriumTitleLabel.textColor = UIColor.navBarTitleLabelColor()
         hStack = UIStackView(arrangedSubviews: [bitcoinTitleLabel, imageView, etheriumTitleLabel])
         hStack!.spacing = 15
         hStack!.alignment = .center
@@ -69,8 +69,8 @@ class HomeViewController: UIViewController {
         if self.traitCollection.userInterfaceStyle == .dark{
             backButton!.setImage(UIImage(named: "dotDarkMode"), for: .normal)
             moreButton!.setImage(UIImage(named: "backDarkMode"), for: .normal)
-            bitcoinTitleLabel.textColor = UIColor(red: 180/255, green: 179/255, blue: 184/255, alpha: 1)
-            etheriumTitleLabel.textColor = UIColor(red: 180/255, green: 179/255, blue: 184/255, alpha: 1)
+            bitcoinTitleLabel.textColor = UIColor.navBarTitleTextColor()
+            etheriumTitleLabel.textColor = UIColor.navBarTitleTextColor()
         }
         moreButton!.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
