@@ -9,7 +9,7 @@ import UIKit
 import DGCharts
 
 class HomeDetailViewController: UIViewController, AxisValueFormatter, ChartAPIManagerDelegate  {
-
+    
     @IBOutlet weak var candleStickChartView: CandleStickChartView!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var portfolioUpdateBAckgroundView: UIView!
@@ -52,7 +52,7 @@ class HomeDetailViewController: UIViewController, AxisValueFormatter, ChartAPIMa
     }
     
     @IBAction func timeframeAction(_ sender: UIButton) {
-        identifierButtonTap = !identifierButtonTap //true
+        identifierButtonTap = !identifierButtonTap
         sender.showsMenuAsPrimaryAction = identifierButtonTap
         //UI set up
         if let previousButton = self.previousButton {
@@ -121,6 +121,7 @@ class HomeDetailViewController: UIViewController, AxisValueFormatter, ChartAPIMa
             sender.menu = menu
         } else {
             sender.showsMenuAsPrimaryAction = !identifierButtonTap
+            ChartAPIManager.shared.makeUrlAccordingToResolution(resolutionTapped: resolutionOnButton)
             ChartAPIManager.shared.performRequestFromChartApi()
             ChartAPIManager.shared.delegate = self
         }
@@ -254,7 +255,7 @@ class HomeDetailViewController: UIViewController, AxisValueFormatter, ChartAPIMa
         let date = dateFormatter.date(from: dateAsString)
         dateFormatter.dateFormat = "HH:mm"
         let date24 = dateFormatter.string(from: date!)
-        print("24 hour formatted Date:",date24)        
+        print("24 hour formatted Date:",date24)
         let timeArray = date24.components(separatedBy: ":")
         var time24 = " "
         let hour: String = timeArray[0]
@@ -279,7 +280,6 @@ class HomeDetailViewController: UIViewController, AxisValueFormatter, ChartAPIMa
         }
         return nil
     }
-    
     
     func setData(resolution: String, chartData: ChartDataModel) {
         time = 0

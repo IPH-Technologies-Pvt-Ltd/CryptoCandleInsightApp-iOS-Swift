@@ -92,7 +92,6 @@
 			children = (
 				3B3895922AD7FAA7000B4117 /* HomeViewController.swift */,
 				3B2BD6342AD82839001734BF /* HomeDetailViewController.swift */,
-				3B4692DD2AE26BCB00147EA1 /* ChartXAxisFormatter.swift */,
 				3B03ABC82AD823C1000A2F36 /* OthersViewController.swift */,
 				3B3895972AD7FAAE000B4117 /* Assets.xcassets */,
 			);
@@ -115,6 +114,7 @@
 				3BA4A5AD2ADD3C5800219617 /* ColorConstants.swift */,
 				3B7384C62AE4393A000E1578 /* ChartData.swift */,
 				3B3A26692AE51EB500EDE627 /* ChartDataModel.swift */,
+				3B4692DD2AE26BCB00147EA1 /* ChartXAxisFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
