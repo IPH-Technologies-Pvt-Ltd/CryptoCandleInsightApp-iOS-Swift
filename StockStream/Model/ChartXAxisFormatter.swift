@@ -33,7 +33,6 @@ class ChartXAxisFormatter: AxisValueFormatter, ChartViewDelegate {
             }
         }
         else if resolutionSelected == "60"{
-            print(value)
             let castValueToInt = Int(value)
             xAxisLabel = "\(castValueToInt):00  "
         }
